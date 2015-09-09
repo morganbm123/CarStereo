@@ -27,7 +27,7 @@
             android:layout_width="470dp"
             android:layout_height="114dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
+            android:text="90.5 FM"
             android:id="@+id/display"
             android:background="#ff000000"
             android:textColor="#ff00ff02"
@@ -84,7 +84,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@color/dim_foreground_disabled_material_light">
+        android:background="@color/dim_foreground_disabled_material_light"
+        android:id="@+id/bottomLayout">
 
         <LinearLayout
             android:orientation="vertical"
@@ -95,7 +96,7 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:padding="100dp">
+                android:padding="50dp">
 
                 <FrameLayout
                     android:layout_width="fill_parent"
@@ -200,7 +201,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="100dp">
+            android:padding="50dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -213,8 +214,8 @@
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Switch"
-                android:id="@+id/am_fm_switch" />
+                android:id="@+id/am_fm_switch"
+                android:switchPadding="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
