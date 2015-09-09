@@ -94,7 +94,8 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:padding="100dp">
 
                 <FrameLayout
                     android:layout_width="fill_parent"
@@ -126,12 +127,18 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:weightSum="1">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView" />
+                android:layout_width="449dp"
+                android:layout_height="match_parent"
+                android:id="@+id/cdDriveView"
+                android:src="@mipmap/cd_drive"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:background="#ff000000" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -141,32 +148,38 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ejectButton" />
+                    android:id="@+id/ejectButton"
+                    android:src="@mipmap/eject" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/stopButton" />
+                    android:id="@+id/stopButton"
+                    android:src="@mipmap/stop" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/playButton" />
+                    android:id="@+id/playButton"
+                    android:src="@mipmap/pause" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/pauseButton" />
+                    android:id="@+id/pauseButton"
+                    android:src="@mipmap/play" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/reverseButton" />
+                    android:id="@+id/reverseButton"
+                    android:src="@mipmap/reverse" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/skipButton" />
+                    android:id="@+id/skipButton"
+                    android:src="@mipmap/skip" />
 
             </LinearLayout>
         </LinearLayout>
@@ -176,12 +189,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"></FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="AM"
+                android:id="@+id/amText"
+                android:textColor="#ffffffff" />
+
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Switch"
                 android:id="@+id/am_fm_switch" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="FM"
+                android:id="@+id/fmText"
+                android:textColor="#ffffffff" />
         </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"></FrameLayout>
     </LinearLayout>
 
 </LinearLayout>
