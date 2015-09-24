@@ -21,14 +21,28 @@
             android:layout_height="230dp"
             android:text="New ToggleButton"
             android:id="@+id/powerButton"
-            android:textSize="50dp" />
+            android:textSize="50dp"
+            android:onClick="onClickPowerBtn"
+            android:background="@color/button_material_light" />
 
         <TextView
-            android:layout_width="470dp"
+            android:layout_width="201dp"
             android:layout_height="114dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="90.5 FM"
+            android:text="@string/station"
             android:id="@+id/display"
+            android:background="#ff000000"
+            android:textColor="#ff00ff02"
+            android:typeface="normal"
+            android:textAlignment="center"
+            android:textSize="60dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="114dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="FM"
+            android:id="@+id/signalText"
             android:background="#ff000000"
             android:textColor="#ff00ff02"
             android:typeface="normal"
@@ -133,43 +147,54 @@
             android:weightSum="1">
 
 
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/presettext"
+                android:id="@+id/presetText"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffffff"
+                android:gravity="center_horizontal" />
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/ejectButton"
                     android:src="@mipmap/eject" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/stopButton"
                     android:src="@mipmap/stop" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/playButton"
+                    android:id="@+id/pauseButton"
                     android:src="@mipmap/pause" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/pauseButton"
-                    android:src="@mipmap/play" />
+                    android:id="@+id/playButton"
+                    android:src="@mipmap/play"
+                    android:focusableInTouchMode="false" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/reverseButton"
                     android:src="@mipmap/reverse" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/skipButton"
                     android:src="@mipmap/skip" />
@@ -183,27 +208,13 @@
             android:layout_height="match_parent"
             android:padding="50dp">
 
-            <TextView
+            <ToggleButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="AM"
-                android:id="@+id/amText"
-                android:textColor="#ffffffff" />
+                android:id="@+id/amfmSwitch"
+                android:textOff="FM"
+                android:textOn="AM" />
 
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/am_fm_switch"
-                android:switchPadding="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="FM"
-                android:id="@+id/fmText"
-                android:textColor="#ffffffff" />
         </LinearLayout>
 
     </LinearLayout>

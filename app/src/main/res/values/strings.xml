@@ -3,4 +3,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="station">90.5 </string>
+    <string name="presettext">1______2______3______4______5______6</string>
 </resources>
